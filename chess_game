@@ -1,0 +1,20 @@
+import chess
+import chess.uci
+
+# Initialize the chess board
+board = chess.Board()
+
+# Start the game loop
+while not board.is_game_over():
+    print(board)
+    move = input("Enter your move (in algebraic notation): ")
+    board.push_san(move)
+
+# Print the result of the game
+result = board.result()
+print("Result: " + result)
+
+
+
+#This script sets up a game loop that continues until the game is over. It prints the current state of the board and prompts the user to enter a move in algebraic notation (e.g. "e2e4"). The move is then applied to the board using the push_san() method. Once the game is over, the result is printed.
+This script is just a basic example, you can add many features like GUI, AI, saving/loading games and so on.
